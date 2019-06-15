@@ -4,7 +4,7 @@ import { RestService } from '../shared/rest.service';
 import { Starship } from './starship';
 
 @Injectable()
-export class StarshipsService extends RestService {
+export class StarshipService extends RestService {
     constructor(http: HttpClient) {
         super(http, 'api/Starships');
     }
