@@ -1,5 +1,7 @@
-export class Film {
-    title: string;
+import { INameable } from '../shared/interfaces/Inameable';
+
+export class Film implements INameable {
+    name: string;
     episodeId: number;
     openingCrawl: string;
     director: string;

@@ -1,4 +1,6 @@
-export class Person {
+import { INameable } from '../shared/interfaces/Inameable';
+
+export class Person implements INameable {
     name: string;
     height: number;
     mass: number;

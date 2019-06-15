@@ -1,4 +1,6 @@
-export class Vehicle {
+import { INameable } from '../shared/interfaces/Inameable';
+
+export class Vehicle implements INameable {
     name: string;
     model: string;
     manufacturer: string;

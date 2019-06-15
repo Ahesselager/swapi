@@ -1,4 +1,6 @@
-export class Planet {
+import { INameable } from '../shared/interfaces/Inameable';
+
+export class Planet implements INameable {
     name: string;
     rotationPeriod: number;
     orbitalPeriod: number;
