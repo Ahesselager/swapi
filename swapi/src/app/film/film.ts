@@ -8,11 +8,14 @@ export class Film implements INameable {
     producer: string;
     releaseDate: Date;
     characters: string[];
-    constructor(person?: any) {
-        if (person != null) {
-            Object.entries(person).forEach((prop) => {
+    constructor(film?: any) {
+        if (film != null) {
+            Object.entries(film).forEach((prop) => {
                 this[prop[0]] = prop[1];
             });
+            if (film.title) {
+                this.name = film.title;
+            }
         }
     }
 }
