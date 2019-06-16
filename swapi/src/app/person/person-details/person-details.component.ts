@@ -2,22 +2,20 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Person } from '../person';
 import { PersonService } from '../person.service';
 
-
 @Component({
     selector: 'swapi-persondetails',
-    templateUrl: './linkreference.component.html',
-    styleUrls: ['./linkreference.component.scss']
+    templateUrl: './person-details.component.html',
+    styleUrls: ['./person-details.component.scss']
 })
-
 
 export class PersonDetailsComponent implements OnInit {
 
     @Input()
-    PersonUrl: string;
+    public personUrl: string;
     @Input()
-    personId: number;
+    public personId: number;
     @Input()
-    person: Person;
+    public person: Person;
 
     constructor(
         private personService: PersonService) { }
@@ -27,9 +25,11 @@ export class PersonDetailsComponent implements OnInit {
                 this.personService.getSingle(this.personId).then(
                     p => this.person = p
                 );
-            } else if (this.PersonUrl) {
-                this.personService.getFromFullURL(this.PersonUrl).then(
-                    p => this.person = p
+            } else if (this.personUrl) {
+                this.personService.getFromFullURL(this.personUrl).then(
+                    p => {
+                        this.person = p;
+                    }
                 );
             }
         }
