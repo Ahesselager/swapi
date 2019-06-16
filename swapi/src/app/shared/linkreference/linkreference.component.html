@@ -1,7 +1,7 @@
 <div *ngIf="referenceObject; else showUrl">
-    <a href="url">{{referenceObject.name}}</a>
+    <a href={{url}}>{{referenceObject.name}}</a>
 </div>
 
 <ng-template #showURL>
-    <a href="url"></a>
+    <a href={{url}}></a>
 </ng-template>

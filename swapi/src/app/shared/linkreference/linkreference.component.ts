@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Objecttype } from '../enums/Objecttype';
 import { INameable } from '../interfaces/Inameable';
-import { RestService } from '../rest.service';
+import { PersonService } from 'src/app/person/person.service';
 
 @Component({
     selector: 'swapi-linkreference',
@@ -11,14 +10,13 @@ import { RestService } from '../rest.service';
 
 export class LinkReferenceComponent implements OnInit {
     @Input()
-    referenceObjectType: Objecttype;
-    @Input()
     url: string;
 
     referenceObject: INameable;
 
     constructor(
-        private restService: RestService
+        // TODO (1) AHG - Dirty hack to workaround for abstract class
+        private restService: PersonService
     ) { }
     ngOnInit(): void {
         this.restService.getFromFullURL(this.url).then(
