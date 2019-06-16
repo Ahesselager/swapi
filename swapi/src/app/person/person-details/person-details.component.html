@@ -1,3 +1,31 @@
 <div *ngIf="person">
-    
+  <div>Name: {{ person.name }}</div>
+  <div>Height: {{ person.height }}</div>
+  <div>Mass: {{ person.mass }}</div>
+  <div>HairColor: {{ person.hairColor }}</div>
+  <div>EyeColor: {{ person.eyeColor }}</div>
+  <div>BirthYear: {{ person.birthYear }}</div>
+  <div>Gender: {{ person.gender }}</div>
+  <div>
+    homeworld:
+    <swapi-linkreference [url]="person.homeworld"></swapi-linkreference>
+  </div>
+  <div>
+    films:
+    <div ngFor="let film of person.films">
+      <swapi-linkreference [url]="film"></swapi-linkreference>
+    </div>
+  </div>
+  <div>
+    Vehicles:
+    <div ngFor="let vehicle of person.vehicles">
+      <swapi-linkreference [url]="vehicle"></swapi-linkreference>
+    </div>
+  </div>
+  <div>
+    Starships:
+    <div ngFor="let starship of person.starships">
+      <swapi-linkreference [url]="starship"></swapi-linkreference>
+    </div>
+  </div>
 </div>

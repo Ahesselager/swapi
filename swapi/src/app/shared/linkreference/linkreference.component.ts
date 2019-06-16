@@ -1,10 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Objecttype } from '../enums/Objecttype';
-import { PersonService } from 'src/app/person/person.service';
-import { FilmsService } from 'src/app/film/film.service';
-import { StarshipService } from 'src/app/starship/starship.service';
-import { VehicleService } from 'src/app/vehicles/vehicle.service';
-import { PlanetService } from 'src/app/planet/planet.service';
+import { INameable } from '../interfaces/Inameable';
+import { RestService } from '../rest.service';
 
 @Component({
     selector: 'swapi-linkreference',
@@ -18,24 +15,14 @@ export class LinkReferenceComponent implements OnInit {
     @Input()
     url: string;
 
+    referenceObject: INameable;
+
     constructor(
-        private filmService: FilmsService,
-        private personService: PersonService,
-        private planetService: PlanetService,
-        private speciesService: SpeciesService,
-        private starshipService: StarshipService,
-        private vehicleService: VehicleService,
+        private restService: RestService
     ) { }
     ngOnInit(): void {
-        switch (this.referenceObjectType) {
-            case Objecttype.Film:
-                this.filmService.getFromFullURL(this.url).then(
-                    
-                )
-                break;
-        
-            default:
-                break;
-        }
+        this.restService.getFromFullURL(this.url).then(
+            ref => this.referenceObject = ref
+        );
     }
 }
