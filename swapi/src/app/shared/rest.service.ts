@@ -17,7 +17,7 @@ export abstract class RestService {
         return resourceUrl;
     }
 
-    public get(id?: string | number, params?: { [index: string]: any }, handleErrors = true): Promise<any> {
+    public get(id?: string | number): Promise<any> {
         const resourceUrl = this.createResourceUrl(id);
 
         return this.http.get(resourceUrl).toPromise();
