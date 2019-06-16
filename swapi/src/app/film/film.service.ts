@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { RestService } from '../shared/rest.service';
+import { SwapiRestService } from '../shared/rest.service';
 import { Film } from './film';
 
 @Injectable()
-export class FilmService extends RestService {
+export class FilmService extends SwapiRestService {
     constructor(http: HttpClient) {
         super(http, 'api/films');
     }
