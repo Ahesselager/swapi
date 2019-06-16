@@ -30,6 +30,9 @@ export class Person implements INameable {
             if (person.skin_color) {
                 this.skinColor = person.skin_color;
             }
+            if (person.birth_year) {
+                this.birthYear = person.birth_year;
+            }
         }
     }
 }
