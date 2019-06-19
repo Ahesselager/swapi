@@ -26,7 +26,8 @@ export class PersonDetailsComponent implements OnInit {
                     p => this.person = p
                 );
             } else if (this.personUrl) {
-                this.personService.getFromFullURL(this.personUrl).then(
+                const splitted = this.personUrl.split('/');
+                this.personService.getFromFullURL(splitted[splitted.length - 1]).then(
                     p => {
                         this.person = p;
                     }

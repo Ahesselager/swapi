@@ -18,9 +18,9 @@ export class Starship implements INameable {
     pilots: string[];
     films: string[];
 
-    constructor(planet?: any) {
-        if (planet != null) {
-            Object.entries(planet).forEach((prop) => {
+    constructor(starship?: any) {
+        if (starship != null) {
+            Object.entries(starship).forEach((prop) => {
                 this[prop[0]] = prop[1];
             });
         }

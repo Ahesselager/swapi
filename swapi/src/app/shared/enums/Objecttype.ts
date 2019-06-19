@@ -1,8 +1,8 @@
 export enum Objecttype {
-Film,
-Person,
-Planet,
-Species,
-Starship,
-Vehicle
+film,
+person,
+planet,
+species,
+starship,
+vehicle
 }

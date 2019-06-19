@@ -7,6 +7,7 @@ import { FilmService } from '../film/film.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { LogInService } from './login.service';
+import { PlanetService } from '../planet/planet.service';
 
 @NgModule({
     imports: [
@@ -24,6 +25,7 @@ import { LogInService } from './login.service';
         StarshipService,
         VehicleService,
         FilmService,
+        PlanetService,
         HttpClient,
         LogInService
     ]

@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { SwapiRestService } from '../shared/rest.service';
+import { RestService } from '../shared/rest.service';
 import { Planet } from './planets';
 
 @Injectable()
-export class PlanetService extends SwapiRestService {
+export class PlanetService extends RestService {
     constructor(http: HttpClient) {
-        super(http, 'api/planets');
+        super(http, 'https://swapi.co/api/planets');
     }
 
     public getSingle(id: number): Promise<Planet> {
@@ -14,7 +14,7 @@ export class PlanetService extends SwapiRestService {
     }
 
     public getFromFullURL(url: string): Promise<Planet> {
-        return super.getFromFullURL(url).then(planet => new Planet(planet));
+        return super.get(url).then(planet => new Planet(planet));
     }
 
 

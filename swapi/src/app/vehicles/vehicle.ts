@@ -16,9 +16,9 @@ export class Vehicle implements INameable {
     pilots: string[];
     films: string[];
 
-    constructor(planet?: any) {
-        if (planet != null) {
-            Object.entries(planet).forEach((prop) => {
+    constructor(vehicle?: any) {
+        if (vehicle != null) {
+            Object.entries(vehicle).forEach((prop) => {
                 this[prop[0]] = prop[1];
             });
         }
