@@ -1,9 +1,9 @@
-namespace Database.Migrations
+namespace WebApplication1.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class user_entity_added : DbMigration
+    public partial class init : DbMigration
     {
         public override void Up()
         {
@@ -11,10 +11,11 @@ namespace Database.Migrations
                 "dbo.Users",
                 c => new
                     {
-                        UserName = c.String(nullable: false, maxLength: 128),
+                        Id = c.Int(nullable: false, identity: true),
+                        Username = c.String(),
                         Password = c.String(),
                     })
-                .PrimaryKey(t => t.UserName);
+                .PrimaryKey(t => t.Id);
             
         }
         
