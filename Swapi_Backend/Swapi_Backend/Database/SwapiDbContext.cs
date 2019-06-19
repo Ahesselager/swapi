@@ -4,9 +4,8 @@ namespace Database
 {
     public class SwapiDbContext : DbContext   
     {
-        public SwapiDbContext(): base()
+        public SwapiDbContext(): base("SwapiDb")
         {
-
         }
 
         public virtual DbSet<User> Users { get; set; }
