@@ -1,6 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <swapi-persondetails [personUrl]="'https://swapi.co/api/people/1/'"></swapi-persondetails>
-<div>
+  <div *ngIf="isLoggedIn">
+    <swapi-persondetails
+      [personUrl]="'https://swapi.co/api/people/1/'"
+    ></swapi-persondetails>
+  </div>
 
+  <div *ngIf="!isLoggedIn">
+    <div>Username: <input type="text" [(ngModel)]="username" /><br /></div>
+    <div>Password: <input type="text" [(ngModel)]="password" /><br /></div>
+  </div>
+</div>
 <router-outlet></router-outlet>

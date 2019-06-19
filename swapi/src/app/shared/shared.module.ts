@@ -6,6 +6,7 @@ import { VehicleService } from '../vehicles/vehicle.service';
 import { FilmService } from '../film/film.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { LogInService } from './login.service';
 
 @NgModule({
     imports: [
@@ -18,6 +19,13 @@ import { CommonModule } from '@angular/common';
     declarations: [
         LinkReferenceComponent
     ],
-    providers: [PersonService, StarshipService, VehicleService, FilmService, HttpClient]
+    providers: [
+        PersonService,
+        StarshipService,
+        VehicleService,
+        FilmService,
+        HttpClient,
+        LogInService
+    ]
 })
 export class SharedModule { }
