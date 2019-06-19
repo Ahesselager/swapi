@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swapi.Database", "Database\Swapi.Database.csproj", "{E33F66A6-D950-4E94-B557-E0737EB383EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swapi.Web.API", "WebApplication1\Swapi.Web.API.csproj", "{710518E5-DE3D-4397-8BDA-BBECA7D969BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E33F66A6-D950-4E94-B557-E0737EB383EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E33F66A6-D950-4E94-B557-E0737EB383EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E33F66A6-D950-4E94-B557-E0737EB383EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E33F66A6-D950-4E94-B557-E0737EB383EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{710518E5-DE3D-4397-8BDA-BBECA7D969BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{710518E5-DE3D-4397-8BDA-BBECA7D969BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{710518E5-DE3D-4397-8BDA-BBECA7D969BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{710518E5-DE3D-4397-8BDA-BBECA7D969BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E670FA7B-5B69-4FA1-9396-413202852645}
+	EndGlobalSection
+EndGlobal
