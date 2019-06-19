@@ -9,6 +9,7 @@
   <div *ngIf="!isLoggedIn">
     <div>Username: <input type="text" [(ngModel)]="username" /><br /></div>
     <div>Password: <input type="text" [(ngModel)]="password" /><br /></div>
+    <button (click)="LogIn()">Log in</button>
   </div>
 </div>
 <router-outlet></router-outlet>
