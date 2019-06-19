@@ -1,9 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <div *ngIf="isLoggedIn">
-    <swapi-persondetails
-      [personUrl]="'https://swapi.co/api/people/1/'"
-    ></swapi-persondetails>
+    <swapi-persondetails [personUrl]="'1'"></swapi-persondetails>
   </div>
 
   <div *ngIf="!isLoggedIn">
