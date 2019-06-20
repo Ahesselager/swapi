@@ -29,10 +29,8 @@ export class LinkReferenceComponent implements OnInit {
         private vehicleService: VehicleService
     ) { }
     ngOnInit(): void {
-        const splitted = this.url.split('/');
-        // links end on a / so we get an empty element as last index
-        // the + typecasts to number
-        const id = +splitted[splitted.length - 2];
+
+        const id = this.getIdFromUrl(this.url);
         switch (this.type) {
             case Objecttype[Objecttype.film]:
                 this.filmService.getSingle(id).then(
@@ -60,5 +58,12 @@ export class LinkReferenceComponent implements OnInit {
             default:
                 break;
         }
+    }
+
+    // links end on a / so we get an empty element as last index
+    // the + typecasts to number
+    private getIdFromUrl(url: string): number {
+        const splitted = url.split('/');
+        return +splitted[splitted.length - 2];
     }
 }
